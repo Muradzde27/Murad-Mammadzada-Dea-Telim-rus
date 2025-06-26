@@ -22,7 +22,7 @@
 // console.log(row);
 // }
 
-///////////////////////////////////////////////
+/////////////////////////////////////////////// task 1 26.06.25
 // function Numbers(start, end) {
 //     if (start > end) return 0;
 //     if (start % 2 !== 0) start++; 
@@ -33,7 +33,7 @@
 // let end = 10;
 
 // console.log(Numbers(start,end))
-
+//task 2
 // function fizzBuzz(n) {
 //     for (let i = 1; i <= n; i++) {
 //         if (i % 3 === 0 && i % 5 === 0) {
@@ -48,7 +48,7 @@
 //     }
 // }
 // fizzBuzz(n)
-
+// task 3
 
 let arr = [0, 1];
 for (let i = 2; i < 20; i++) {
