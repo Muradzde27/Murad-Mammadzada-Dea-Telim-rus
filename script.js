@@ -23,14 +23,35 @@
 // }
 
 ///////////////////////////////////////////////
-function Numbers(start, end) {
-    if (start > end) return 0;
-    if (start % 2 !== 0) start++; 
-    if (start > end) return 0;
-    return start + Numbers(start + 2, end);
+// function Numbers(start, end) {
+//     if (start > end) return 0;
+//     if (start % 2 !== 0) start++; 
+//     if (start > end) return 0;
+//     return start + Numbers(start + 2, end);
+// }
+// let start = 1;
+// let end = 10;
+
+// console.log(Numbers(start,end))
+
+// function fizzBuzz(n) {
+//     for (let i = 1; i <= n; i++) {
+//         if (i % 3 === 0 && i % 5 === 0) {
+//             console.log("FizzBuzz");
+//         } else if (i % 3 === 0) {
+//             console.log("Fizz");
+//         } else if (i % 5 === 0) {
+//             console.log("Buzz");
+//         }else {
+//             console.log(i);
+//         }
+//     }
+// }
+// fizzBuzz(n)
+
+
+let arr = [0, 1];
+for (let i = 2; i < 20; i++) {
+  arr[i] = arr[i - 1] + arr[i - 2];
 }
-let start = 1;
-let end = 10;
-
-console.log(Numbers(start,end))
-
+console.log(arr);
