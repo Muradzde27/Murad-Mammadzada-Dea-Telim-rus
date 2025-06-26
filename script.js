@@ -48,10 +48,37 @@
 //     }
 // }
 // fizzBuzz(n)
+
+
+
 // task 3
 
-let arr = [0, 1];
-for (let i = 2; i < 20; i++) {
-  arr[i] = arr[i - 1] + arr[i - 2];
+// let arr = [0, 1];
+// for (let i = 2; i < 20; i++) {
+//   arr[i] = arr[i - 1] + arr[i - 2];
+// }
+// console.log(arr);
+
+
+//// task 4
+
+function bnSearch(nums, end) {
+  let first = 0;
+  let second = end.length - 1;
+
+  while (first <= second) {
+      let mid = Math.floor((first + second) / 2);
+      if (nums[mid] === end) {
+          return mid;
+      } else if (nums[mid] < end) {
+          second = mid + 1;
+      } else {
+          first = mid - 1;
+      }
+  }
+  return -1;
 }
-console.log(arr);
+
+
+console.log(bnSearch([1, 3, 5, 7, 9], 5));
+console.log(bnSearch([1, 3, 5, 7, 9], 6));
