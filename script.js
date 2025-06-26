@@ -6,15 +6,31 @@
 //     console.log(i);
 // }
 
-for( i = 0; i < 4; i++) {
-let row = " ";
-for ( let j = 0; j < row - 1 - i; j++) {
-    row += " ";
-} 
+///////////////////////////////////////////////
 
-  for ( let k = 0; k < 2 * i + 1; k++) {
-    row += "*";
+// for( i = 0; i < 4; i++) {
+// let row = " ";
+// for ( let j = 0; j < row - 1 - i; j++) {
+//     row += " ";
+// } 
+
+
+
+//   for ( let k = 0; k < 2 * i + 1; k++) {
+//     row += "*";
+// }
+// console.log(row);
+// }
+
+///////////////////////////////////////////////
+function Numbers(start, end) {
+    if (start > end) return 0;
+    if (start % 2 !== 0) start++; 
+    if (start > end) return 0;
+    return start + Numbers(start + 2, end);
 }
-console.log(row);
-}
+let start = 1;
+let end = 10;
+
+console.log(Numbers(start,end))
 
