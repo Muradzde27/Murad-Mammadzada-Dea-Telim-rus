@@ -1,17 +1,8 @@
 function Anagram(str1, str2) {
     if (str1.length !== str2.length) return false;
-    let length = {};
+    const sorted1 = str1.split('').sort().join('');
+    const sorted2 = str2.split('').sort().join('');
+    return sorted1 === sorted2;
+  }
 
-    for (let char of str1) {
-        length[char] = (length[char] || 0) + 1;
-    }
-
-    for (let char of str2) {
-        if (!length[char]) return false;
-        length[char]--;
-    }
-
-    return true;
-}
-
-console.log(Anagram("alma", "amal"));
+  console.log(Anagram("alma", "amal")); 
