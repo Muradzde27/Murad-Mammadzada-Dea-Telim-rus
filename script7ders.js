@@ -8,13 +8,33 @@
 // console.log(Anagram("alma", "amal")); 
 
 
-function mergeee(a, b) {
-    let data = [], i = 0, j = 0;
-    while (i < a.length && j < b.length)
-        data.push(a[i] < b[j] ? a[i++] : b[j++]);
-    return data.concat(a.slice(i)).concat(b.slice(j));
+function slova(words) {
+    if (words.length == 0) {
+        return "";
+    }
+
+    let result = "";
+    let i = 0;
+
+    while (true) {
+        let currentWords;
+        if (i < words[0].length) {
+            currentWords = words[0][i];
+        } else {
+           break;
+        }
+
+        for (let j = 1; j < words.length; j++) {
+            if (i >= words[j].length || words[j][i] != currentWords) {
+                return result;
+            }
+        }
+        result = result + currentWords;
+        i = i + 1;
+    }
+    return result;
 }
 
-let a = [2, 7, 13, 24, 47];
-let b = [27, 31, 37, 44, 57, 123, 432];
-console.log(mergeee(a, b));
+let myWords = ["fllllllower", "fllllllsfdfdow", "fll33333llllight"];
+let answer = slova(myWords);
+console.log(answer);
